@@ -28,3 +28,20 @@
 // 5) Give the BadGuy constructor a tagLine method that will take the parameter "tagline" and say the tag line when prompted by a new instance in the following format: console.log("this.name" + " said " + this.tagline); ...
 
 // 6) Make Hans Gruber (the badDude instance say "That's a beautiful suit....I'd hate to ruin it.")
+
+function BadGuy(name, tagline) {
+  this.name = name;
+  this.tagline = tagline;
+  this.sayTagLine = function(){
+    console.log(this.name + " said " + this.tagline);
+  }
+};
+
+let badDude = new BadGuy("Hans Gruber", "That's a beautiful suit....I'd hate to ruin it.");
+
+let scaryGuy = new BadGuy("Freddy");
+
+console.log(BadGuy);
+console.log(badDude.name);
+console.log(scaryGuy.name);
+console.log(badDude.sayTagLine());
